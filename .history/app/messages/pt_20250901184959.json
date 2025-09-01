@@ -1,0 +1,27 @@
+{
+  "home": {
+    "title": "Demolição de casas térreas em Shonan/Yokohama para Nikkei Demolição Indústria Co., Ltd.",
+    "services": {
+      "careful": {
+        "title": "Obra Cuidadosa",
+        "desc": "Antes da obra, visitamos cada vizinho para explicar o conteúdo da obra pessoalmente. Como a maioria das pessoas tem ansiedade em relação às obras de demolição, explicamos especificamente o método de proteção e o momento em que a máquina pesada destruirá a superestrutura, etc. Nesse momento, podem surgir solicitações dos moradores, então discutimos para iniciar a obra com tranquilidade de ambos os lados, com máxima consideração."
+      },
+      "price": {
+        "title": "Preço Seguro",
+        "desc": "Com base na inspeção do local, criamos uma estimativa clara incluindo a quantidade de árvores e muros de bloco, etc., que não estão incluídos no edifício. Quanto ao custo de remoção de objetos enterrados no solo, que é frequentemente um problema nas obras de demolição, informaremos prontamente se objetos enterrados forem encontrados, confirmaremos no local e prosseguiremos com a obra."
+      },
+      "response": {
+        "title": "Resposta Rápida",
+        "desc": "Respondemos rapidamente às consultas dos vizinhos durante a obra."
+      }
+    },
+    "company": {
+      "name": "Nikkei Demolição Indústria Co., Ltd.",
+      "address": "253-0081 Prefeitura de Kanagawa, Cidade de Chigasaki, Shimo-Terai 1759",
+      "tel": "TEL 0467-38-8842",
+      "fax": "FAX 0467-38-8843",
+      "email": "E-mail: momose2201@yahoo.co.jp"
+    },
+    "types": ["Construção RC", "Construção de madeira", "Construção de estrutura de aço", "Demolição interna", "Corte de árvores", "Casas de incêndio"]
+  }
+}

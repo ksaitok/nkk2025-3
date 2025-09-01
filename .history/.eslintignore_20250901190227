@@ -1,0 +1,4 @@
+# Generated files
+app/generated/
+app/generated/prisma/
+node_modules/

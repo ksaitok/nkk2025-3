@@ -1,0 +1,27 @@
+{
+  "home": {
+    "title": "Shonan/Yokohama Detached House Demolition to Nikkei Demolition Industry Co., Ltd.",
+    "services": {
+      "careful": {
+        "title": "Careful Construction",
+        "desc": "Before construction, we visit each neighbor to explain the construction content in person. Since most people have anxiety about demolition work, we specifically explain the method of sheeting and the timing of crushing the superstructure, etc. At that time, requests from residents may also come up, so we discuss to start construction with peace of mind on both sides, with maximum consideration."
+      },
+      "price": {
+        "title": "Safe Price",
+        "desc": "Based on the site survey, we create a clear estimate including the amount of trees and block walls, etc., which are not included in the building. Regarding the cost of removing buried objects in the ground, which is often a problem in demolition work, we will promptly report if buried objects are found, confirm on site, and proceed with the work."
+      },
+      "response": {
+        "title": "Quick Response",
+        "desc": "We respond quickly to inquiries from neighboring residents during construction."
+      }
+    },
+    "company": {
+      "name": "Nikkei Demolition Industry Co., Ltd.",
+      "address": "253-0081 Kanagawa Prefecture Chigasaki City Shimo-Terai 1759",
+      "tel": "TEL 0467-38-8842",
+      "fax": "FAX 0467-38-8843",
+      "email": "E-mail: momose2201@yahoo.co.jp"
+    },
+    "types": ["RC construction", "Wood construction", "Steel frame construction", "Interior demolition", "Tree felling", "Fire houses"]
+  }
+}
