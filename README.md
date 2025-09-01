@@ -48,3 +48,37 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Deploy on Netlify
+
+### Prerequisites
+- Netlify account
+- GitHub repository connected to Netlify
+
+### Environment Variables
+Create the following environment variables in your Netlify dashboard:
+
+```bash
+DATABASE_URL=file:./dev.db
+NEXTAUTH_SECRET=your-secret-key-here
+NEXTAUTH_URL=https://your-netlify-site.netlify.app
+```
+
+### Build Configuration
+The `netlify.toml` file is already configured with:
+- Build command: `npm run build`
+- Publish directory: `.next`
+- Legacy peer deps flag for dependency resolution
+- Disabled dependency caching for fresh Prisma Client generation
+
+### Deploy Steps
+1. Connect your GitHub repository to Netlify
+2. Set the build settings (automatically detected from netlify.toml)
+3. Add environment variables
+4. Deploy!
+
+### Troubleshooting
+If you encounter Prisma Client issues:
+- The build process automatically regenerates Prisma Client
+- Dependency caching is disabled to ensure fresh installations
+- Postinstall script ensures Prisma Client is always up to date
