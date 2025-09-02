@@ -55,30 +55,48 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - Netlify account
 - GitHub repository connected to Netlify
 
-### Environment Variables
-Create the following environment variables in your Netlify dashboard:
+### Environment Variables (CRITICAL for Production)
+Set these environment variables in your Netlify dashboard under **Site settings > Environment variables**:
 
 ```bash
 DATABASE_URL=file:./dev.db
-NEXTAUTH_SECRET=your-secret-key-here
-NEXTAUTH_URL=https://your-netlify-site.netlify.app
+NEXTAUTH_SECRET=your-super-secret-key-here-make-it-long-and-random
+NEXTAUTH_URL=https://nikkei2025-3.netlify.app
+NODE_ENV=production
 ```
 
 ### Build Configuration
 The `netlify.toml` file is already configured with:
-- Build command: `npm run build`
+- Build command: `prisma generate && next build`
 - Publish directory: `.next`
 - Legacy peer deps flag for dependency resolution
 - Disabled dependency caching for fresh Prisma Client generation
+- Node.js version 22 specified
 
 ### Deploy Steps
-1. Connect your GitHub repository to Netlify
-2. Set the build settings (automatically detected from netlify.toml)
-3. Add environment variables
-4. Deploy!
+1. **Connect Repository**: Connect your GitHub repository (`ksaitok/nkk2025-3`) to Netlify
+2. **Set Environment Variables**: Add all required environment variables in Netlify dashboard
+3. **Deploy**: Netlify will automatically detect settings from `netlify.toml`
+4. **Monitor Build**: Check build logs for any issues
 
-### Troubleshooting
-If you encounter Prisma Client issues:
-- The build process automatically regenerates Prisma Client
-- Dependency caching is disabled to ensure fresh installations
-- Postinstall script ensures Prisma Client is always up to date
+### Troubleshooting Production Errors
+
+#### If you see "Application error: a server-side exception"
+1. **Check Environment Variables**: Ensure all variables are set correctly in Netlify
+2. **Verify NEXTAUTH_URL**: Must match your Netlify domain exactly
+3. **Check Database**: SQLite file path should work in Netlify environment
+4. **Review Build Logs**: Check for Prisma Client generation errors
+
+#### Common Issues:
+- **Missing NEXTAUTH_SECRET**: Generate a secure random string
+- **Wrong NEXTAUTH_URL**: Must be `https://your-site.netlify.app`
+- **Database Connection**: SQLite should work, but monitor for file permission issues
+
+### Build Logs
+Monitor these in Netlify build logs:
+- ✅ Prisma Client generation
+- ✅ Next.js compilation
+- ✅ Static page generation
+- ✅ API route building
+
+The application includes comprehensive error handling and will show detailed error pages in development mode.
